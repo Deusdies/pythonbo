@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>icons/arch-icon.png</file>
+     <file>icons/fedora-icon.png</file>
+     <file>icons/windows-icon.png</file>
+	 <file>icons/app-icon.png</file>
+ </qresource>
+ </RCC>
