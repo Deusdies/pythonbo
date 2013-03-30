@@ -49,6 +49,7 @@ class Form(QDialog):
 
         try:
             date = "Unknown"
+            date_line = []
 
             fh = urllib2.urlopen("http://www.bankofcanada.ca/en/markets/csv/exchange_eng.csv")
 
@@ -59,14 +60,22 @@ class Form(QDialog):
 
                 fields = line.split(",")
                 if line.startswith("Date "):
-                    date = fields[-1]
+                    # Copy date line because we yet don't know on which day rates are available
+                    date_line = fields[:]
+                    continue
 
-                else:
+                value = -1
+                # Go from right to left except name and shortname column
+                for col in reversed(range(2, len(fields))):
                     try:
-                        value = float(fields[-1])
-                        self.rates[fields[0]] = value
+                        value = float(fields[col])  # try to get value
+                        date = date_line[col]       # no exception > rates are available: update day
+                        break
                     except ValueError:
-                        pass
+                        # Today is holiday or conversion is not available, go one day back
+                        continue
+
+                self.rates[fields[0]] = value
 
             return "Exchange rates date: " + date
         except Exception, e:
