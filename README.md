@@ -8,3 +8,5 @@ I will share the code I use in my tutorials here. You can obviously download the
 Please visit my YouTube channel for all videos: http://youtube.com/Deusdies2 (somewhat outdated)
 
 A more professionally-done, up-to-date video tutorials are available at http://www.udemy.com/python-gui-programming
+
+The newest one, and the best one (by far) can be found on Pluralsight - http://pluralsight.com (look under Python category).
