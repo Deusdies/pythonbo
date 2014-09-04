@@ -9,4 +9,4 @@ Please visit my YouTube channel for all videos: http://youtube.com/Deusdies2 (so
 
 A more professionally-done, up-to-date video tutorials are available at http://www.udemy.com/python-gui-programming
 
-The newest one, and the best one (by far) can be found on Pluralsight - http://pluralsight.com (look under Python category).
+The newest one, and the best one (by far) can be found on Pluralsight - http://pluralsight.com/training/Courses/Discussion/python-desktop-application-development
